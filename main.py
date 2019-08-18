@@ -680,5 +680,5 @@ if __name__ == '__main__':
     t = w.tablePL
     #window.showGraph()
     window.show()
-    #sys.exit(app.exec_())
+    sys.exit(app.exec_())
 
