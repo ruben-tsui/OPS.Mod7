@@ -77,6 +77,8 @@ class Window(QMainWindow):
         #self.params = params
         self.NEWSIM = True # Boolean flag to indicate whether a new simulation is necessary 
 
+        self.button_Simulate.hide()
+
         self.slider_S0.valueChanged.connect(self.on_change_S0)
 
         self.slider_K_C1.valueChanged.connect(self.on_change_K_C1)
@@ -138,6 +140,7 @@ class Window(QMainWindow):
         self.spin_C1.setValue(-1)
         self.spin_Share.setValue(1)
         self.spin_P1.setValue(0)
+        self.on_click_NewSim()
 
     def on_click_CoveredCallReverse(self):
         self.spin_C1.setValue(1)
@@ -148,6 +151,7 @@ class Window(QMainWindow):
         self.spin_P1.setValue(1)
         self.spin_Share.setValue(1)
         self.spin_C1.setValue(0)
+        self.on_click_NewSim()
 
     def on_click_ProtectivePutReverse(self):
         self.spin_P1.setValue(-1)
